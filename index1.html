@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación para Byron</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top, #1d3557, #0b1321);
+            color: #f1faee;
+            padding: 16px;
+        }
+
+        .card {
+            background: rgba(10, 18, 35, 0.95);
+            border-radius: 18px;
+            max-width: 900px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.1fr 1.2fr;
+            gap: 24px;
+            padding: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .card-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #ffbe0b;
+            border: 1px solid #ffbe0b55;
+            border-radius: 999px;
+            padding: 6px 14px;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 3vw, 2.3rem);
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: #ffbe0b;
+        }
+
+        p {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #e0fbfc;
+        }
+
+        .info {
+            margin-top: 8px;
+            display: grid;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #ffbe0b;
+        }
+
+        .button-row {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn {
+            border-radius: 999px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffbe0b, #ff7b00);
+            color: #1d3557;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(255, 190, 11, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(255, 190, 11, 0.45);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #f1faee;
+            border: 1px solid #ffffff33;
+        }
+
+        .btn-secondary:hover {
+            background: #ffffff10;
+        }
+
+        .card-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-right img {
+            max-width: 100%;
+            border-radius: 16px;
+            display: block;
+        }
+
+        .footer-note {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #a8dadc;
+        }
+
+        @media (max-width: 760px) {
+            .card {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .card-right {
+                order: -1; /* imagen arriba en móvil */
+            }
+            body {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-left">
+        <span class="tag">Invitación especial</span>
+        <h1>Byron, hoy celebramos <span>con carne y buena compañía</span></h1>
+        <p>
+            Te invitamos a cenar hoy en <strong>Las Carnes de Rodrigo, zona 9</strong>. 
+            La idea es relajarnos, comer rico y pasar un buen rato.
+        </p>
+
+        <div class="info">
+            <div><span class="label">Lugar:</span> Las Carnes de Rodrigo, zona 9 – Ciudad de Guatemala</div>
+            <div><span class="label">Fecha:</span> Hoy</div>
+            <div><span class="label">Hora:</span> Almuerzo (A las 13:00 )</div>
+        </div>
+
+        <div class="button-row">
+            <a href="#" class="btn btn-primary">Confirmar asistencia</a>
+            <a href="https://maps.app.goo.gl/Z6DgMWwLeTZWixzJ9" target="_blank" class="btn btn-secondary">
+                Ver ubicación en Maps
+            </a>
+        </div>
+
+        <p class="footer-note">
+            Si quieres, lleva antojo de carne y buena plática. Todo lo demás está cubierto.
+        </p>
+    </div>
+
+    <div class="card-right">
+        <!-- Reemplaza el src con la ruta/archivo real de la imagen que generamos -->
+        <img src="byron.png" alt="Ilustración de Byron celebrando su cumpleaños">
+    </div>
+</div>
+
+</body>
+</html>
